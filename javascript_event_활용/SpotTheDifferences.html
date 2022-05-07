@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>틀린 그림 찾기</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .container img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .one {
+      width: 110px;
+      height: 100px;
+      border-radius: 50%;
+      position:absolute;
+      top: 4%;
+      right: 12%;
+    }
+
+
+
+    .two {
+      width: 110px;
+      height: 100px;
+      border-radius: 50%;
+      position:absolute;
+      bottom: 18%;
+      right: 38%;
+    }
+
+
+    .three {
+      width: 120px;
+      height: 130px;
+      border-radius: 50%;
+      position:absolute;
+      bottom: 0%;
+      right: 17%;
+    }
+
+    .four {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      position:absolute;
+      bottom: 8%;
+      right: 4%;
+    }
+
+    .five {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position:absolute;
+      bottom: 13%;
+      right: 15%;
+    }
+
+    .six {
+      width: 110px;
+      height: 100px;
+      border-radius: 50%;
+      position:absolute;
+      bottom: 28%;
+      right: 25%;
+    }
+
+    .seven {
+      width: 110px;
+      height: 100px;
+      border-radius: 50%;
+      position:absolute;
+      bottom: 30%;
+      right: 20%;
+    }
+
+    .eight {
+      width: 110px;
+      height: 100px;
+      border-radius: 50%;
+      position:absolute;
+      top: 24%;
+      right: 10%;
+    }
+
+  </style>
+
+
+
+</head>
+<body>
+  <div class="container">
+    <img src="틀린그림.png">
+  </div>
+
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+<div class="four"></div>
+<div class="five"></div>
+<div class="six"></div>
+<div class="seven"></div>
+<div class="eight"></div>
+
+
+<script>
+
+  let one = document.querySelector('.one');
+  let two = document.querySelector('.two');
+  let three = document.querySelector('.three');
+  let four = document.querySelector('.four');
+  let five = document.querySelector('.five');
+  let six = document.querySelector('.six');
+  let seven = document.querySelector('.seven');
+  let eight = document.querySelector('.eight');
+
+  one.addEventListener("click",function() {
+    one.style.border = '3px solid red';
+  })
+
+  two.addEventListener("click",function() {
+    two.style.border = '5px solid red';
+  })
+
+  three.addEventListener("click",function() {
+    three.style.border = '5px solid red';
+  })
+
+  four.addEventListener("click",function() {
+    four.style.border = '5px solid red';
+  })
+
+  five.addEventListener("click",function() {
+    five.style.border = '5px solid red';
+  })
+
+  six.addEventListener("click",function() {
+    six.style.border = '5px solid red';
+  })
+
+  seven.addEventListener("click",function() {
+    seven.style.border = '5px solid red';
+  })
+
+  eight.addEventListener("click",function() {
+    eight.style.border = '5px solid red';
+  })
+
+
+</script>
+</body>
+</html>
