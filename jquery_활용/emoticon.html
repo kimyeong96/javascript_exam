@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--jquery cdn이용 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container2 {
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+    }
+
+    .imgBox {
+      width: 100%;
+      height: 90%;
+      border: 1px solid black;
+    }
+
+    .row {
+      width: 100%;
+      height: 33.33%;
+      display: flex;
+    }
+
+    .firstRow {
+      background-color: skyblue;
+    }
+
+    .secondRow {
+      background-color: #03a822;
+    }
+
+    .thirdRow {
+      background-color: #e88941;
+    }
+
+    .row>img {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .btnBox {
+      margin: 0 auto;
+    }
+
+    .btn {
+      border-radius: 45%;
+      margin-top: 10px;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <div class="container2">
+    <div class="imgBox">
+      <div class="row firstRow">
+        <img src="image/2.png">
+        <img src="image/3.png">
+        <img src="image/4.png">
+      </div>
+      <div class="row secondRow">
+        <img src="image/5.png">
+        <img src="image/6.png">
+        <img src="image/7.png">
+      </div>
+      <div class="row thirdRow">
+        <img src="image/8.png">
+        <img src="image/9.png">
+        <img src="image/10.png">
+      </div>
+    </div>
+    <div class="btnBox">
+      <button type="button" class="btn">버튼</button>
+    </div>
+  </div>
+
+  <script>
+    $(".btn").on("click", function () {
+      $(".imgBox").fadeToggle(1000);
+    })
+  </script>
+
+
+</body>
+
+</html>
