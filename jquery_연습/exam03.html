@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--jquery cdn이용 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>exam03</title>
+
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="div1" class="btnChange">firstDiv</div>
+  <button type="button" id="btn1">Change 1st Div</button>
+  <div id="div2" class="btnChange">secondtDiv</div>
+  <button type="button" id="btn2" >Change 2st Div</button>
+  <div id="div3" class="btnChange">thirdDiv</div>
+  <button type="button" id="btn3">Change 3st Div</button>
+  <button type="button" id="btnAll">Change All</button>
+
+
+  <script>
+
+    $(".btnChange")
+
+
+
+
+
+    // 버튼 1 눌렀을시
+    $("#btn1").on("click", function () {
+      $("#div1").css({
+        "background-color": "pink",
+        "color": "red"
+      })
+    })
+
+    // 버튼 2 눌렀을시
+    $("#btn2").on("click", function () {
+      $("#div2").css({
+        "background-color": "yellowgreen",
+        "color": "blue"
+      })
+    })
+
+    // 버튼 3 눌렀을시
+    $("#btn3").on("click", function () {
+      $("#div3").css({
+        "background-color": "black",
+        "color": "yellow"
+      })
+    })
+
+    // 전체 버튼 눌렀을 떄
+    $("#btnAll").on("click", function () {
+      $("div").css({
+        "background-color": "#1aa7e8",
+        "color": "blue",
+      })
+    })
+
+
+  </script>
+
+
+
+
+
+</body>
+
+
+
+</html>

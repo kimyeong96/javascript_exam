@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--jquery cdn이용 -->
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+   crossorigin="anonymous"></script>
+  <title>exam01</title>
+</head>
+<body>
+  <button id="button1" value="btn1">버튼1</button>
+  <button id="button2" value="btn2">버튼2</button>
+  <button id="button3" value="btn3">버튼3</button>
+  <button id="button4" value="btn4">버튼4</button>
+
+  <script>
+
+    $("button").on("click",function() {
+      let text = this.value; // 선택한 버튼의 value
+      let text2 = this.innerHTML; // 선택한 버튼의 text 내용
+      alert(`${text}  : ${text2}`);
+    })
+
+
+
+
+  </script>
+
+
+
+
+
+</body>
+</html>

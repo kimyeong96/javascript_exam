@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!--jquery cdn이용 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+  <style>
+    div {
+      width: 150px;
+      height: 150px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <button type="button" id="btn">1div</button>
+  <div></div>
+  <button type="button" id="btn">2div</button>
+  <div></div>
+  <button type="button" id="btn">3div</button>
+  <div></div>
+  <button type="button" id="btn">4div</button>
+
+  <script>
+
+    // 버튼이 눌리면 해당 div의 배경이 변경되는 문제
+
+    // 1번 째로 푼거
+    // $("button").on("click", function () {
+
+    //   console.log($(this));
+
+    //   if($(this) == $("#btn").eq(0)){
+    //     console.log("teh");
+    //   }
+
+
+    //   $("button").eq(1).prev();
+
+
+    //   if (this.innerHTML == '1div') {
+    //     $("div").eq(0).css("background-color", `rgb(${r},${g},${b})`);
+    //   } else if (this.innerHTML == '2div') {
+    //     $("div").eq(1).css("background-color", `rgb(${r},${g},${b})`);
+    //   } else if (this.innerHTML == '3div') {
+    //     $("div").eq(2).css("background-color", `rgb(${r},${g},${b})`);
+    //   } else if (this.innerHTML == '4div') {
+    //     $("div").eq(3).css("background-color", `rgb(${r},${g},${b})`);
+    //   }
+    // })
+
+
+    // 2번째로 푼거
+    for(let i = 0; i < $("div").length; i++){
+      $(`button`).eq(`${i}`).on("click",function(){
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        $(`button`).eq(`${i}`).prev().css("background-color", `rgb(${r},${g},${b})`);
+      })
+    }
+
+  </script>
+
+
+</body>
+
+</html>

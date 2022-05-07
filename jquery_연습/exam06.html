@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exam06</title>
+  <!--jquery cdn이용 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <style>
+    .container {
+      border: 1px solid black;
+      width: 300px;
+      height: 300px;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container"></div>
+  <button type="button" class="up">위로 추가 하기</button>
+  <button type="button" class="down">아래로 추가 하기</button>
+
+
+  <script>
+
+    let count = 1;
+
+    $(".up").on("click", function () {
+      $(".container").prepend(`Contents Message Here : ${count}<br>`);
+      count++;
+
+      // 위에 새로운 요소가 추가될 경우 스크롤이 최상단에 붙여있어야한다
+      // 방법1
+      // let offset = $(".container").offset();
+      // $(".container").animate({ scrollTop: offset.top }, 400);
+
+      // 방법2
+      $(".container").scrollTop(0);
+    });
+
+
+    $(".down").on("click", function () {
+      $(".container").append(`Contents Message Here : ${count}<br>`);
+      count++;
+      // scroll의 높이
+      // 방법 1
+      // console.log($(".container").prop("scrollHeight"));
+      // $(".container").scrollTop($(".container")[0].scrollHeight);
+
+      // 방법 2
+      let scrollH = $(".container").prop("scrollHeight");
+      $(".container").scrollTop(scrollH);
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exam08</title>
+  <!--jquery cdn이용 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+<style>
+  .container {
+    border: 1px dotted skyblue;
+    width: 500px;
+  }
+
+  .deleteBtn {
+    background-color: red;
+    border: none;
+    color: white;
+  }
+</style>
+
+
+</head>
+<body>
+
+  <div class="container">
+    <strong>파일 추가</strong>
+    <button class="addBtn">파일 추가 </button>
+  </div>
+
+  <script>
+    $(".addBtn").on("click",function() {
+      // 컨텐츠 내용 생성
+      let contents = `<div><input type="file"><button class="deleteBtn">-</button></div>`;
+      $(".container").append(contents);
+
+      // 삭제 버튼 눌렀을때 한 줄(contents) 삭제
+      $(".deleteBtn").on("click",function(e) {
+        $(e.target).parent().remove();
+      })
+    })
+  </script>
+
+
+
+</body>
+</html>

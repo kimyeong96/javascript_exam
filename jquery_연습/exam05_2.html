@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+    <!--jquery cdn이용 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+  <style>
+    div {
+      width: 150px;
+      height: 150px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <button class="btnCls">1div</button>
+  <div></div>
+  <button class="btnCls">2div</button>
+  <div></div>
+  <button class="btnCls">3div</button>
+  <div></div>
+  <button class="btnCls">4div</button>
+
+
+<script>
+
+  let colors = [
+    "oragne",
+    "red",
+    "blue",
+    "green",
+    "black",
+    "yellow"
+  ]
+
+  $(".btnCls").on("click",function() {
+    $(this).prev().css("background-color", colors[getRanNum()]);
+  })
+
+  function getRanNum() {
+    return Math.floor(Math.random() * 5);
+  }
+
+</script>
+</body>
+</html>

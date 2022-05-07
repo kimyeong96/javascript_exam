@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--jquery cdn이용 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+<p id="1번">1번</p>
+<p id="2번">2번</p>
+<p id="3번">3번</p>
+<p id="4번">4번</p>
+<input type="text" id="input" placeholder="줄 번호를 입력하세요">
+<input type="text" id="input2" placeholder="색을 입력하세요">
+<button type="button" id="btn">적용</button>
+
+<script>
+  $("#btn").on("click",function() {
+
+    let input1 = $("#input").val();
+    let input2 = $("#input2").val();
+
+    $(`#${input1}번`).css("background-color",`${input2}`);
+
+    // input값 초기화
+    $("#input").val("");
+    $("#input2").val("");
+  })
+</script>
+</body>
+
+</html>

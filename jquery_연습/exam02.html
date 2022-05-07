@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--jquery cdn이용 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>exam02</title>
+
+<style>
+  div {
+    border: 2px solid black;
+    width: 400px;
+    height: 200px;
+  }
+</style>
+
+
+</head>
+<body>
+  <input type="text" id="input">
+  <button type="buttom" id="btn">완료</button>
+  <h3>결과</h3>
+  <div id="div"></div>
+
+<script>
+  let input = document.getElementById('input');
+  let div = document.getElementById('div');
+
+  // 완료를 누르면 div에 삽입
+  $("#btn").on("click",function() {
+
+    // 기존 자바스크립트 방식
+    // let text = input.value;
+    // console.log(text);
+    // div.innerHTML = text;
+    // div.style.border = '2px solid pink';
+
+    // 제이쿼리 방식
+    let text = $("#input").val();
+    $("#div").html(text);
+    $("#div").css("border","2px solid pink");
+    $("#input").val(""); // 완료 버튼 누르고 비우기
+  })
+
+
+  // 키를 누르는 즉시 div에 반영
+    $("#input").on("keyup",function() {
+    // 제이쿼리 방식
+    let text = $("#input").val();
+    $("#div").html(text);
+    $("#div").css("border","2px solid dodgerblue");
+
+  })
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
